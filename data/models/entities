@@ -1,0 +1,33 @@
+var Sequelize = require('sequelize');
+
+var sequelize = new Sequelize('Wah', 'root', '47516326', {
+    dialect: "mysql",
+    port: 3306
+});
+
+var Provincia = sequelize.define('Provincia', {
+
+    Id: { type: Sequelize.INTEGER, primaryKey: true },
+    Nombre: { type: Sequelize.STRING },
+
+}, { tableName : 'Provincia', timestamps : false});
+
+Provincia.findAll().then(function(provincias){
+    console.log(provincias);
+});
+
+var Partido = sequelize.define('Partido', {
+
+    Id: { type: Sequelize.INTEGER, primaryKey: true },
+    ProvinciaId: { type: Sequelize.INTEGER, references: { model: Provincia, key: 'Id'} },
+    Nombre: { type: Sequelize.STRING },
+
+}, { tableName : 'Partido', timestamps : false});
+
+Partido.findAll().then(function(partidos){
+    console.log(partidos);
+});
+
+
+module.exports.Provincia = Provincia;
+module.exports.sequelize = sequelize;
