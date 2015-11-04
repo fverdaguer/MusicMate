@@ -1,0 +1,255 @@
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" ng-controller="Proyectos">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Nuevo Proyecto</h4>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Título</span>
+                    <input type="text" ng-model="titulo" class="form-control" placeholder="Título" aria-describedby="basic-addon1">
+                </div>
+                <hr />
+
+                <div class="input-group">
+                    <span class="input-group-addon"><img src="/images/youtube-logo.png" width="23px;"/></span>
+                    <input type="text" ng-model="youtubeUrl" class="form-control" id="youtube-url" aria-describedby="basic-addon3"
+                           placeholder="https://youtu.be/musicmate">
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon"><img src="/images/facebook.png" width="23px;"/></span>
+                    <input type="text" ng-model="facebookUrl" class="form-control" id="facebook-url" aria-describedby="basic-addon3"
+                           placeholder="https://www.facebook.com/La-Banda-de-los-Boludos-285966241447843/">
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon"><img src="/images/soundcloud-icon.png" width="23px;"/></span>
+                    <input type="text" ng-model="soundcloudUrl" class="form-control" id="soundcloud-url" aria-describedby="basic-addon3"
+                           placeholder="https://soundcloud.com/musicmate/mate-it">
+                </div>
+
+                <hr />
+
+                <div class="input-group">
+                    <span class="input-group-addon">Zona</span>
+                    <input type="text" ng-model="zona" class="form-control" id="zona" aria-describedby="basic-addon3">
+                </div>
+
+                <hr />
+
+                <label for="musician-tpye">Músicos buscados</label>
+                <div class="row" id="musician-tpye" ng-model="instrumentos">
+                    <div class="col-lg-4">
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Voz
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Guitarra principal
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Guitarra clásica
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Guitarra acústica
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Guitarra rítmica
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Bajo
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Bateria
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Teclados
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Piano
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Trompeta
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Saxo
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Contrabajo
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Armónica
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Percusión
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Sintetizador
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Violín
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Otro
+                            </label>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+                <hr/>
+                <label for="genre">Géneros</label>
+                <div class="row" id="genre" ng-model="generos">
+                    <div class="col-lg-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Rock
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Blues
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Hard Rock
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Metal
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Punk
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Hardcore
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Ska
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Reggae
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Post-Punk
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Post-Harcore
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Stoner
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Funk
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Pop
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Cumbia
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Jazz
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Bossa
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Covers
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Otro
+                            </label>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" ng-click="saveProyecto()" class="btn btn-primary">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>

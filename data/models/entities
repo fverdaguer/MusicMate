@@ -12,9 +12,11 @@ var Provincia = sequelize.define('Provincia', {
 
 }, { tableName : 'Provincia', timestamps : false});
 
-Provincia.findAll().then(function(provincias){
+/*Provincia.findAll().then(function(provincias){
+    provincias = provincias.map(function(provincia){ return provincia.toJSON() });
+
     console.log(provincias);
-});
+});*/
 
 var Partido = sequelize.define('Partido', {
 
@@ -22,12 +24,23 @@ var Partido = sequelize.define('Partido', {
     ProvinciaId: { type: Sequelize.INTEGER, references: { model: Provincia, key: 'Id'} },
     Nombre: { type: Sequelize.STRING },
 
-}, { tableName : 'Partido', timestamps : false});
+}, { tableName: 'Partido', timestamps: false});
 
-Partido.findAll().then(function(partidos){
+/*Partido.findAll().then(function(partidos){
+    partidos = partidos.map(function(partido){ return partido.toJSON() });
+
     console.log(partidos);
-});
+});*/
 
+var Localidad = sequelize.define('Localidad', {
 
-module.exports.Provincia = Provincia;
-module.exports.sequelize = sequelize;
+    Id: { type: Sequelize.INTEGER, primaryKey: true},
+    PartidoId: { type: Sequelize.INTEGER, references: { model: Partido, key: 'Id'} },
+    Nombre: { type: Sequelize.STRING },
+
+}, { tableName: 'Localidad', timestamps: false});
+
+exports.Provincia = Provincia;
+exports.Partido = Partido;
+exports.Localidad = Localidad;
+//exports.sequelize = sequelize;
